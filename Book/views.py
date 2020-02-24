@@ -51,3 +51,9 @@ def returning(request):
 
 def success(request):
     return render(request, 'Book/success.html')
+
+def manual(request):
+    return render(request, 'Book/manual.html')
+
+def searchbook(request):
+    return render(request, 'Book/searchbook.html')

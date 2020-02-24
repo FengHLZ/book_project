@@ -80,9 +80,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'book',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '1234567',
         'HOST': '47.103.117.169',
-        'PORT': '22400',
+        'PORT': '33066',
     }
 }
 
@@ -127,3 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+MEDIA_ROOT = 'static/img/'
+
+MEDIA_URL = 'static/img/'

@@ -20,10 +20,14 @@ from Book import views
 from django.contrib.staticfiles.views import serve
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
+from django.urls import re_path
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'favicon.ico/', serve, {'path': 'img/favicon.ico'}),
     url(r'^$', views.index),
     url(r'^book/', include('Book.urls')),
+    re_path('static/img/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
 ]

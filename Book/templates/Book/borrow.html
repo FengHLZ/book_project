@@ -65,12 +65,16 @@
           <div class="col-lg-8 col-lg-offset-2">
 
             <div class="section-heading">
-              <h2>*********</h2>
+              <h3>*********</h3>
             </div>
 
           </div>
         </div>
       </div>
+          <ul class="breadcrumb">
+	<b>>  </b><li><a href="/">主页</a></li>
+	<li class="active">书籍借阅</li>
+</ul>
     </div>
 
         <div class="heading-contact marginbot-50">
@@ -90,18 +94,16 @@
       <div class="row">
         <div class="col-lg-8 col-md-offset-2">
           <div class="boxed-grey">
-{#            <div id="sendmessage">Your message has been sent. Thank you!</div>#}
-{#            <div id="error message"></div>#}
             <div class="x_content">
-            <form action="{% url 'borrow' %}" method="post" role="form" enctype="multipart/form-data">
+            <form action="{% url 'borrow' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
 
                 {% for row in form %}
                 <div class="form-group text-center">
-                    <label class="control-label col-md-8 col-sm-12 col-xs-12">{{ row.label_tag }}</label>
-                        <div  class="col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-2 text-right">{{ row.label_tag }}</label>
+{#                        <div  class="col-md-14">#}
                             {{ row }}
-                        </div>
+{#                        </div>#}
                     <div class="validation"></div>
                 </div>
                 {% endfor %}
@@ -109,32 +111,10 @@
               <div class="text-center"><button type="submit" class="btn btn-skin">提交</button></div>
             </form>
             </div>
-{#            </div>#}
-{#            </div>#}
           </div>
-
-{#          <div class="widget-contact row">#}
-{#            <div class="col-lg-6">#}
-{#              <address>#}
-{#				  <strong>Ninestars Ltd.</strong><br>#}
-{#				  Big Villa 334 Awesome, Beautiful Suite 1200<br>#}
-{#				  San Francisco, CA 94107<br>#}
-{#				  <abbr title="Phone">P:</abbr> (123) 456-7890#}
-{#				</address>#}
-{#            </div>#}
-{##}
-{#            <div class="col-lg-6">#}
-{#              <address>#}
-{#				  <strong>Email</strong><br>#}
-{#				  <a href="mailto:#">email.name@example.com</a><br />#}
-{#				   <a href="mailto:#">name.name@example.com</a>#}
-{#				</address>#}
-{##}
-{#            </div>#}
-{#          </div>#}
-        </div>
         </div>
       </div>
+    </div>
 
   </section>
   <!-- /Section: intro -->

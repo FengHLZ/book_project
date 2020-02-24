@@ -68,12 +68,16 @@
           <div class="col-lg-8 col-lg-offset-2">
 
             <div class="section-heading">
-              <h2>*********</h2>
+              <h3>*********</h3>
             </div>
 
           </div>
         </div>
       </div>
+          <ul class="breadcrumb">
+	<b>>  </b><li><a href="/">主页</a></li>
+	<li class="active">书籍归还</li>
+</ul>
     </div>
 
         <div class="heading-contact marginbot-50">
@@ -101,15 +105,15 @@
 
                 {% for row in form %}
                 <div class="form-group text-center">
-                    <label class="control-label col-md-8 col-sm-12 col-xs-12">{{ row.label_tag }}</label>
-                        <div  class="col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-2">{{ row.label_tag }}</label>
+{#                        <div  class="col-md-12 col-sm-12 col-xs-12">#}
                             {{ row }}
-                        </div>
+{#                        </div>#}
                     <div class="validation"></div>
                 </div>
                 {% endfor %}
 
-              <div class="text-center"><button type="submit" class="btn btn-skin">提交</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-skin">提交查询</button></div>
             </form>
             </div>
 {#            </div>#}
